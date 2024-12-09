@@ -68,7 +68,7 @@ jobs:
         run: |
           docker build -t ghcr.io/yeongkyukang/notice_service:latest .
 
-      # Push the Docker image to GHCR
+      # Push the Docker image to GHCR.
       - name: Push Docker image to GHCR
         run: |
           docker push ghcr.io/yeongkyukang/notice_service:latest
