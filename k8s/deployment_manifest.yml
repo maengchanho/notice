@@ -13,7 +13,7 @@ spec:
         app: notice_service
     spec:
       containers:
-      - name: notice_service_container
-        image: ghcr.io/maengchanho/notice-service:latest
-        ports:
-        - containerPort: 5004
+        - name: notice_service_container
+          image: ghcr.io/maengchanho/notice-service:latest
+          ports:
+            - containerPort: 5004
