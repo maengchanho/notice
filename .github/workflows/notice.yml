@@ -66,9 +66,13 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/maengchanho/notice_service:latest .
+          docker build -t ghcr.io/maengchanho/notice-service:latest .
 
       # Push the Docker image to GHCR.
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/maengchanho/notice_service:latest
+          docker push ghcr.io/maengchanho/notice-service:latest
+
+      - name: Verify image
+        run: |
+          docker pull ghcr.io/maengchanho/notice-service:latest
