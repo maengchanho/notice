@@ -60,20 +60,20 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_TOKEN }}
 
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/yeongkyukang/notice_service:latest .
+          docker build -t ghcr.io/maengchanho/notice:latest .
 
       # Push the Docker image to GHCR.
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/yeongkyukang/notice_service:latest
+          docker push ghcr.io/maengchanho/notice:latest
 
       # Verify image push
       - name: Verify image
         run: |
-          docker pull ghcr.io/yeongkyukang/notice_service:latest
+          docker pull ghcr.io/maengchanho/notice:latest
