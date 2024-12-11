@@ -5,11 +5,11 @@ metadata:
   namespace: default
 spec:
   generators:
-    - list:
+    - git:
         elements:
           - name: notice-service-appset
             repoURL: 'git@github.com:maengchanho/notice.git'
-            targetRevision: HEAD
+            revision: main
             path: 'k8s'
   template:
     metadata:
@@ -18,7 +18,7 @@ spec:
       project: default
       source:
         repoURL: '{{repoURL}}'
-        targetRevision: '{{targetRevision}}'
+        targetRevision: main
         path: '{{path}}'
       destination:
         server: 'https://kubernetes.default.svc'
