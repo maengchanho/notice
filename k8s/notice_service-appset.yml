@@ -22,7 +22,7 @@ spec:
         path: '{{path}}'
       destination:
         server: 'https://kubernetes.default.svc'
-        namespace: default
+        namespace: notice-service
       syncPolicy:
         automated:
           prune: true
