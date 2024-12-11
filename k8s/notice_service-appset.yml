@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: notice-service-applicationset
-  namespace: default
+  namespace: notice-service
 spec:
   generators:
     - list:
