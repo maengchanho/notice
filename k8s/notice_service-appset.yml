@@ -9,7 +9,7 @@ spec:
         elements:
           - name: notice-service-appset
             repoURL: 'git@github.com:maengchanho/notice.git'
-            revision: main
+            targetRevision: main
             path: 'k8s'
   template:
     metadata:
@@ -18,7 +18,7 @@ spec:
       project: default
       source:
         repoURL: '{{repoURL}}'
-        targetRevision: main
+        targetRevision: '{{targetRevision}}'
         path: '{{path}}'
       destination:
         server: 'https://kubernetes.default.svc'
