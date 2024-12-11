@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notice-service-container
+  name: notice-service
 spec:
   replicas: 3
   selector:
@@ -13,7 +13,7 @@ spec:
         app: notice-service
     spec:
       containers:
-        - name: notice-service-container
+        - name: notice-service
           image: ghcr.io/maengchanho/notice-service:latest
           ports:
             - containerPort: 5004
