@@ -17,3 +17,5 @@ spec:
           image: ghcr.io/maengchanho/notice-service:latest
           ports:
             - containerPort: 5004
+      imagePullSecrets:
+        - name: ghcr-secrets
