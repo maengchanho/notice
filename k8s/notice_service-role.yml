@@ -4,7 +4,7 @@ metadata:
   name: notice-service-rbac
 rules:
   - apiGroups: ["autoscaling/v2"]
-    resources: ["horizontalpodautoacalers"]
+    resources: ["horizontalpodautoscalers"]
     verbs:
       - create
       - get
