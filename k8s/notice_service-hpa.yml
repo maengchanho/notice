@@ -5,6 +5,7 @@ metadata:
   namespace: notice-service
 spec:
   scaleTargetRef:
+      apiVersion: apps/v1
       kind: Deployment
       name: deployment_manifest.yml
   minReplicas: 1
